@@ -14,7 +14,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Achievement - Xiaotian&#39;s Blog
+          My Research - Xiaotian&#39;s Blog
         
     </title>
 
@@ -88,7 +88,7 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
                     <div class="site-heading">
-                        <h1>Achievement</h1>
+                        <h1>My Research</h1>
                         <!--<hr class="small">-->
                         <span class="subheading">Hey, this is Tags.</span>
                     </div>
@@ -136,14 +136,7 @@
 
                         
                         <li>
-                            <a href="/archive/">Publications</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/tags/">Achievement</a>
+                            <a href="/archive/">Publication</a>
                         </li>
                         
                     
@@ -151,6 +144,13 @@
                         
                         <li>
                             <a href="/about/">About Me</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">My Research</a>
                         </li>
                         
                     
@@ -208,7 +208,37 @@
                 post-container
             ">
             
-                <p>xxxx</p>
+                <h2><span id="research-experience">Research Experience</span></h2>
+<ul>
+<li>
+<p><strong>Hardware/Software co-design of quantization for Nerual Network</strong><br>
+<em>Work in progress</em><br>
+Advisor: Prof. Xinfei Guo<br>
+Duration: Oct 2021 - Present</p>
+<ul>
+<li><strong>Hardware-Software Co-design</strong><br>
+Support the post-training MPQ with tightly integrated vector-matrix multiply units in a CPU pipeline through micro-architecture and ISA co-design.</li>
+<li><strong>A Novel MPQ Searching Algorithm</strong><br>
+Propose new metric $w$ and use the greedy algorithm to sample the layer-wise sensitivity with respect to both accuracy and proxy of hardware cost. Propose a metric denoted as $\mathcal{P}$ to measure the influence of QAT on accuracy over PTQ.</li>
+<li><strong>Impact</strong><br>
+Proposed search algorithm achieves $3%\sim11%$ higher inference accuracy with similar SOTA MPQ strategies.</li>
+</ul>
+</li>
+<li>
+<p><strong>High-Quality Macro Placement with Enhanced Dataflow-Aware Guidance</strong><br>
+<em>Work in progress</em><br>
+Advisor: Prof. Xinfei Guo<br>
+Duration: Aug 2022 - Present</p>
+<ul>
+<li><strong>Based on Open Source EDA platform - OpenROAD</strong><br>
+Research of macro placement based on open source EDA software OpenROAD.</li>
+<li><strong>Dataflow-Aware Connection Between Macro and Standard Cell</strong><br>
+Use virtual weighted connections to establish data flow relationships between macro and macro and between macro and cell.</li>
+<li><strong>Impact</strong><br>
+Compared with other macro placer in OpenROAD, HPWL has better optimization effect.</li>
+</ul>
+</li>
+</ul>
 
 
                 <!-- 如果开启评论功能 -->
@@ -298,22 +328,6 @@
         </ul>
     </div>
 </section>
-        <hr>
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-            
-        
-            
-        
-    </div>
-</section>
-
         <hr>
     
         
