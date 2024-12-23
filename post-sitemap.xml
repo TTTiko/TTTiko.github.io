@@ -7,8 +7,24 @@
     </url>
 
     <url>
-        <loc>http://yoursite-url/2024/04/08/hexo-theme-beantech/</loc>
-        <lastmod>2024-04-08T06:44:44.353Z</lastmod>
+        <loc>http://yoursite-url/2024/04/08/intro/</loc>
+        <lastmod>2024-12-23T11:04:38.845Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite-url/2024/08/01/news%20240801/</loc>
+        <lastmod>2024-12-23T11:04:10.508Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://yoursite-url/2024/11/12/news%20241101/</loc>
+        <lastmod>2024-12-23T10:58:22.965Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
