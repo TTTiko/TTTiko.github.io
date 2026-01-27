@@ -287,6 +287,21 @@
         gap: 15px;
         margin-top: 15px;
       }
+
+      .news-container {
+        margin: 20px 0;
+        padding: 15px;
+        background-color: var(--light-gray);
+        border-radius: 6px;
+    }
+
+    .news-item {
+        margin-bottom: 10px;
+        background-color: var(--light-gray);
+        padding: 15px 20px;
+        border-radius: 6px;
+     }
+
       
       .emoji {
         font-size: 28px;
@@ -402,6 +417,7 @@
         <div class="nav-links" id="navLinks">
           <a href="#about">About</a>
           <a href="#research">Research</a>
+          <a href="#news">News</a>
           <a href="#hobby">Hobby</a>
           <a href="#contact">Contact</a>
         </div>
@@ -430,6 +446,17 @@
           </div>
         </div>
       </header>
+
+      <section id="news">
+        <h2>News</h2>
+        <div class="news-container">
+          <div class="news-item">
+            <p><strong>[2026-01-28]</strong> Updated my personal website with a new design!</p>
+            <p><strong>[2025-12-30]</strong> Published a new paper in IEEE TC.</p>
+        </div>
+        </div>
+      </section>
+
 
       <section id="research">
         <h2>Research</h2>
@@ -518,7 +545,6 @@
               <p>  In this work, we propose a novel MPQ search algorithmthat obtains an optimal scheme by “sampling” layer-wise sensi-tivity with respect to a newly proposed metric that incorporatesboth accuracy and proxy of hardware cost. To further efficientlydeploy post-training MPQ on edge chips, we propose to tightly inte-grate the quantized inference units as part of the processor pipelinethrough micro-architecture and Instruction Set Architecture (ISA)co-design.  </p>
             </div>
           </div>
-
 
 
       <section id="hobby" class="hobby-section">
