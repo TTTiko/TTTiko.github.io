@@ -1,544 +1,588 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-
-<!-- Head tag -->
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>赵晓田 Xiaotian Zhao</title>
+    <meta name="author" content="Xiaotian Zhao">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content>
-    <meta name="keyword" content>
-    <link rel="shortcut icon" href="/img/ironman-draw.png">
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <title>
-        
-          Xiaotian&#39;s Blog
-        
-    </title>
-
-    <link rel="canonical" href="http://yoursite-url/">
-
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-
-    <!-- Custom CSS --> 
-    <link rel="stylesheet" href="/css/beantech.min.css">
-    
-    <!-- Pygments Highlight CSS -->
-    <link rel="stylesheet" href="/css/highlight.css">
-
-    <link rel="stylesheet" href="/css/widget.css">
-
-    <link rel="stylesheet" href="/css/rocket.css">
-
-    <link rel="stylesheet" href="/css/signature.css">
-
-    <link rel="stylesheet" href="/css/toc.css">
-
-    <!-- Custom Fonts -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <!-- Hux change font-awesome CDN to qiniu -->
-    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-
-    <!-- Hux Delete, sad but pending in China
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
-    css'>
-    -->
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- ga & ba script hoook -->
-    <script></script>
-</head>
-
-
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="">
-	<!-- Modified by Yu-Hsuan Yen -->
-<!-- Post Header -->
-<style type="text/css">
-    header.intro-header{
-        
-            background-image: url('/img/home-bg-shanghai.JPG') 
-            /*config*/
-        
-    }
-    
-    #signature{
-        background-image: url('/undefined');
-    }
-    
-</style>
-
-<header class="intro-header" >
-    <!-- Signature -->
-    <div id="signature">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
-                    <div class="site-heading">
-                        <h1>Xiaotian Zhao</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">Ph.D. Student of iCAS Lab at Shanghai Jiao Tong University</span>
-                    </div>
-                
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-	
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Xiaotian Zhao</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-
-                    
-
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/about/">About Me</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/tags/">My Research</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
-                            <a href="/archive/publication.html">Publication</a>
-                        </li>
-                        
-                    
-                    
-                </ul>
-            </div>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
+    <link rel="shortcut icon" href="images/candy.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-color: #122F51;
+        --secondary-color: #3e6990;
+        --accent-color: #1e88e5;
+        --background-color: #ffffff;
+        --text-color: #333333;
+        --light-gray: #f5f5f5;
+        --border-color: #e0e0e0;
+      }
+      
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      .container {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 30px 20px;
+        background-color: var(--background-color);
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+      }
+      
+      /* Navigation Bar Styles */
+      nav {
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 12px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        border-radius: 8px;
+      }
+      
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      .logo {
+        font-family: 'Lora', serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: white;
+        text-decoration: none;
+      }
+      
+      .nav-links {
+        display: flex;
+        gap: 30px;
+      }
+      
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        padding: 5px 10px;
+        border-radius: 4px;
+      }
+      
+      .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        text-decoration: none;
+      }
+      
+      .mobile-menu-btn {
+        display: none;
+        color: white;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+        padding-bottom: 30px;
+      }
+      
+      .header-content {
+        display: flex;
+        width: 100%;
+        gap: 40px;
+        align-items: center;
+        margin-top: 20px;
+      }
+      
+      .profile-image {
+        width: 230px;
+        height: 230px;
+        border-radius: 8px;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      
+      .profile-image:hover {
+        transform: scale(1.02);
+      }
+      
+      .bio {
+        flex: 1;
+      }
+      
+      h1 {
+        font-family: 'Lora', serif;
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 10px;
+        display: inline-block;
+      }
+      
+      h2 {
+        font-family: 'Lora', serif;
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin: 30px 0 20px 0;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border-color);
+      }
+      
+      p {
+        margin-bottom: 15px;
+        line-height: 1.7;
+        color: #444;
+      }
+      
+      a {
+        color: var(--accent-color);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      
+      a:hover {
+        color: var(--secondary-color);
+        text-decoration: underline;
+      }
+      
+      .social-links {
+        display: flex;
+        gap: 20px;
+        margin: 15px 0;
+      }
+      
+      .social-links a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 6px 15px;
+        background-color: var(--light-gray);
+        border-radius: 30px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all 0.2s;
+      }
+      
+      .social-links a:hover {
+        background-color: var(--primary-color);
+        color: white;
+        text-decoration: none;
+        transform: translateY(-2px);
+      }
+      
+      .social-links i {
+        font-size: 1rem;
+      }
+      
+      .research-item {
+        display: flex;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid var(--border-color);
+        gap: 25px;
+      }
+      
+      .research-item:last-child {
+        border-bottom: none;
+      }
+      
+      .research-image {
+        width: 340px;
+        min-width: 340px;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f9f9f9;
+      }
+      
+      .research-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+      
+      .research-image img:hover {
+        transform: scale(1.03);
+      }
+      
+      .research-content {
+        flex: 1;
+      }
+      
+      .paper-title {
+        font-family: 'Lora', serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        line-height: 1.4;
+      }
+      
+      .authors {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        color: #555;
+      }
+      
+      .publication {
+        font-style: italic;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+        color: #666;
+      }
+      
+      .author-highlight {
+        font-weight: 600;
+        color: #444;
+      }
+      
+      .hobby-section {
+        text-align: center;
+        margin: 40px 0;
+        padding: 30px;
+        background-color: var(--light-gray);
+        border-radius: 8px;
+      }
+      
+      .emoji-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+      }
+      
+      .emoji {
+        font-size: 28px;
+        background-color: white;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+      
+      .emoji:hover {
+        transform: scale(1.1);
+      }
+      
+      .footer {
+        text-align: center;
+        margin-top: 50px;
+        padding-top: 30px;
+        border-top: 1px solid var(--border-color);
+        font-size: 0.9rem;
+        color: #777;
+      }
+      
+      .contact-info {
+        background-color: var(--light-gray);
+        padding: 15px 20px;
+        border-radius: 6px;
+        margin-top: 15px;
+      }
+      
+      .contact-info p {
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      .contact-info i {
+        color: var(--secondary-color);
+        width: 20px;
+      }
+      
+      .footnote {
+        font-size: 0.9rem;
+        color: #666;
+        border-left: 3px solid var(--accent-color);
+        padding-left: 15px;
+        margin: 15px 0;
+      }
+      
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: var(--primary-color);
+          padding: 20px;
+          gap: 15px;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
-    }
-</script>
-
-
-    <!-- Main Content -->
-    <!-- Main Content -->
-<div class="container">
-    <div class="row">
         
+        .nav-links.show {
+          display: flex;
+        }
+        
+        .mobile-menu-btn {
+          display: block;
+        }
+        
+        .header-content {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        
+        .profile-image {
+          margin-bottom: 25px;
+        }
+        
+        .social-links {
+          justify-content: center;
+        }
+        
+        .research-item {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .research-image {
+          width: 100%;
+          max-width: 350px;
+          min-width: unset;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
 
-<!-- USE SIDEBAR -->
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
-            
-                <!-- Main Content -->
-
-
-<div class="post-preview">
-
-    <a href="/2024/11/12/news 241101/">
-        <h2 class="post-title">
-            [News] - Scholarship!
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            I received the SJTU level Huatai Securities Research Scholarship, and she also secured the JI level KLA Corporation scholarship😻! These are all highly competitive recognitions and also the great e......
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="#" class="logo">Xiaotian Zhao</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#hobby">Hobby</a>
+          <a href="#contact">Contact</a>
         </div>
-    </a>
+      </div>
+    </nav>
     
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Xiaotian Zhao on
-            2024-11-12
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Blog" title="Blog">Blog</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2024/08/01/news 240801/">
-        <h2 class="post-title">
-            [News] - Paper Acceptance!
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            My paper was accepted by IEEE Transactions on Computers (CCF-A), which is the first journal for me! 🥳 Great news!
-...
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Xiaotian Zhao on
-            2024-08-01
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Blog" title="Blog">Blog</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-<div class="post-preview">
-
-    <a href="/2024/04/08/intro/">
-        <h2 class="post-title">
-            [Welcome] - A Self-Introduction
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            First Look! 🥳
-Hi, I’m Xiaotian Zhao 赵晓田, a second-year Ph.D. student from Shanghai Jiao Tong University (SJTU) advised by Prof. Xinfei Guo.
-My research interests include EDA optimizing algorithms ......
-        </div>
-    </a>
-    
-        <p class="post-meta" style="margin: 10px 0;">
-            Posted by Xiaotian Zhao on
-            2024-04-08
-        </p>
-        <div class="tags">
-            
-              <a href="/tags/#Blog" title="Blog">Blog</a>
-            
-        </div>
-    
-
-</div>
-<hr>
-
-
-
-<!-- Pager -->
-
-<ul class="pager">
-    
-    
-</ul>
-
-
-
-                <!-- 如果开启评论功能 -->
-                
-            </div>
-
-          <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">ABOUT ME</a></h5>
-    <div class="short-about">
-
-        
-            <img id = "avatar_pic" src="/img/xiaotian_profile.jpg" />
-        
-
-        
-            <p>Hi, I&#39;m Xiaotian Zhao! </p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-            
-            
-
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/tttiko">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-        </ul>
-    </div>
-</section>
-        <hr>
-    
-        
-  <h5>RECENT POSTS</h3>
-  <div class="widget">
-    <ul>
-      
-        <li>
-          <a href="/2024/11/12/news 241101/">[News] - Scholarship!</a>
-        </li>
-      
-        <li>
-          <a href="/2024/08/01/news 240801/">[News] - Paper Acceptance!</a>
-        </li>
-      
-        <li>
-          <a href="/2024/04/08/intro/">[Welcome] - A Self-Introduction</a>
-        </li>
-      
-    </ul>
-  </div>
-
-        <hr>
-    
-</div>
-
-        
-    </div>
-</div>
-
-
-    <!-- Footer -->
-    <!-- Footer -->
-<footer>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                
-                
-                
-
-                
-
-                
-
-                
-                    <li>
-                        <a target="_blank"  href="https://github.com/tttiko">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
-
-                
-
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; Xiaotian Zhao 2024 
-                    <br>
-                    Theme by <a href="http://huangxuan.me">Hux</a> 
-                    <span style="display: inline-block; margin: 0 5px;">
-                        <i class="fa fa-heart"></i>
-                    </span> 
-                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
-                    <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="91px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
-                    </iframe>
-                </p>
+      <header id="about">
+        <div class="header-content">
+          <img src="images/xiaotian.jpg" alt="Xiaotian Zhao" class="profile-image">
+          <div class="bio">
+            <h1>赵晓田 Xiaotian Zhao</h1>
+            <p>I'm a Ph.D. candidate of iCAS Lab at Shanghai Jiao Tong University (SJTU), advised by Prof. <a href="https://sites.gc.sjtu.edu.cn/xinfei-guo/">Xinfei Guo</a>.</p>
+            <p>My research focuses on EDA optimizing algorithms, with a primary interest in macro placement, rectilinear floorplanning and 3DIC for high-performance chip design. I also work on mixed-precision quantization for Edge AI, aiming to balance efficiency and accuracy on resource-constrained devices. In the future, I will continue to focus on optimizing algorithms in EDA placement and further integrating them with RL and LLMs.</p>
+            
+            <div class="contact-info" id="contact">
+              <p><i class="fas fa-envelope"></i> xiaotian.zhao@sjtu.edu.cn</p>
+              <p><i class="fab fa-weixin"></i> TTTiko_Z</p>
             </div>
+            
+            <div class="social-links">
+              <a href="mailto:xiaotian.zhao@sjtu.edu.cn"><i class="fas fa-envelope"></i> Email</a>
+              <a href="https://scholar.google.com/citations?user=chpkZh0AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+              <a href="https://www.linkedin.com/in/xiaotian-zhao-90552b238/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+          </div>
         </div>
+      </header>
+
+      <section id="research">
+        <h2>Research</h2>
+        <div class="footnote">
+          <sup>*</sup> denotes equal contribution, and <sup>†</sup> denotes corresponding author.
+        </div>
+
+        <div class="research-item">
+            <div class="research-image">
+              <img src="images/todaes.jpg" alt="TODAES26">
+            </div>
+            <div class="research-content">
+              <a href="https://arxiv.org/pdf/2505.16445">
+                <div class="paper-title">DARE: Enriching Physical Dataflow Awareness for Macro Placement Optimization</div>
+              </a>
+              <div class="authors">
+                <span class="author-highlight">Xiaotian Zhao</span>,
+                <a>Zixuan Li</a>,
+                <a>Yichen Cai</a>,
+                <a>Jiayin Chen</a>,
+                <a>Yushan Pan</a>,
+                <a href="https://sites.gc.sjtu.edu.cn/xinfei-guo/">Xinfei Guo†</a>,
+              </div>
+              <div class="publication">ACM Transactions on Design Automation of Electronic Systems (TODAES), 2026</div>
+              <p>  In this work,, we propose DARE, which extracts hidden connections between macros and standard cells and incorporates a series of algorithms to enrich dataflow awareness, integrating them into placement constraints for improved macro placement. To further optimize placement results, we introduce two fine-tuning steps: (1) congestion optimization by taking macro area into consideration, and (2) flipping decisions to determine the optimal macro orientation based on the extracted dataflow informatio
+              </div>
+          </div>
+
+        <div class="research-item">
+            <div class="research-image">
+              <img src="images/tc.jpg" alt="TC">
+            </div>
+            <div class="research-content">
+              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10633877">
+                <div class="paper-title">Edge-MPQ: Layer-Wise Mixed-Precision Quantization With Tightly Integrated Versatile Inference Units for Edge Computing</div>
+              </a>
+              <div class="authors">
+                <span class="author-highlight">Xiaotian Zhao</span>,
+                <a>Ruge Xu</a>,
+                <a>Yimin Gao</a>,
+                <a>Vaibhav Verma</a>,
+                <a>Mircea R. Stan</a>,
+                <a href="https://sites.gc.sjtu.edu.cn/xinfei-guo/">Xinfei Guo†</a>,
+              </div>
+              <div class="publication">IEEE TRANSACTIONS ON COMPUTERS (TC), 2024</div>
+              <p>  In this paper, we propose the tight integration of versatile MPQ inference units supporting INT2-INT8 and INT16 precisions, which feature a hierarchical multiplier architecture, into a RISC-V processor pipeline through micro-architecture and Instruction Set Architecture (ISA) co-design.   </p>
+            </div>
+          </div>
+
+        <div class="research-item">
+            <div class="research-image">
+              <img src="images/date.jpg" alt="DATE24">
+            </div>
+            <div class="research-content">
+              <a href="https://ieeexplore.ieee.org/abstract/document/10546560">
+                <div class="paper-title">Standard Cells Do Matter: Uncovering Hidden Connections for High-Quality Macro Placement</div>
+              </a>
+              <div class="authors">
+                <span class="author-highlight">Xiaotian Zhao</span>,
+                <a>Tianju Wang</a>,
+                <a>Run Jiao</a>,
+                <a href="https://sites.gc.sjtu.edu.cn/xinfei-guo/">Xinfei Guo†</a>,
+              </div>
+              <div class="publication">Design, Automation & Test in Europe Conference & Exhibition (DATE), 2024</div>
+              <p> In this study, we identify the necessity of macro-cell connection awareness for high-quality macro placement and propose a novel methodology to extract all “hidden” relationships efficiently among macros and cell clusters.  </p>
+            </div>
+          </div>
+        
+          <div class="research-item">
+            <div class="research-image">
+              <img src="images/glsvlsi.png" alt="glsvlsi">
+            </div>
+            <div class="research-content">
+              <a href="https://dl.acm.org/doi/epdf/10.1145/3583781.3590292">
+                <div class="paper-title">Design Space Exploration of Layer-Wise Mixed-PrecisionQuantization with Tightly Integrated Edge Inference Unit</div>
+              </a>
+              <div class="authors">
+                <span class="author-highlight">Xiaotian Zhao</span>,
+                <a>Yimin Gao</a>,
+                <a>Vaibhav Verma</a>,
+                <a>Ruge Xu</a>,
+                <a>Mircea Stan</a>,
+                <a href="https://sites.gc.sjtu.edu.cn/xinfei-guo/">Xinfei Guo†</a>,
+              </div>
+              <div class="publication">Proceedings of the Great Lakes Symposium on VLSI (GLSVLSI), 2023</div>
+              <p>  In this work, we propose a novel MPQ search algorithmthat obtains an optimal scheme by “sampling” layer-wise sensi-tivity with respect to a newly proposed metric that incorporatesboth accuracy and proxy of hardware cost. To further efficientlydeploy post-training MPQ on edge chips, we propose to tightly inte-grate the quantized inference units as part of the processor pipelinethrough micro-architecture and Instruction Set Architecture (ISA)co-design.  </p>
+            </div>
+          </div>
+
+
+
+      <section id="hobby" class="hobby-section">
+        <h2>Hobby</h2>
+        <div class="emoji-container">
+          <div class="emoji">&#9975;</div>
+          <div class="emoji">&#127938;</div>
+          <div class="emoji">&#9976;</div>
+          <div class="emoji">&#127916;</div>
+          <div class="emoji">&#127919;</div>
+          <div class="emoji">&#127925;</div>
+          <div class="emoji">&#127931;</div>
+          <div class="emoji">&#127939;</div>
+          <div class="emoji">&#127946;</div>
+          <div class="emoji">&#127955;</div>
+          <div class="emoji">&#127992;</div>
+          <div class="emoji">&#128248;</div>
+          <div class="emoji">&#129336;</div>
+          <div class="emoji">&#127956;</div>
+          <div class="emoji">&#9978;</div>
+          <div class="emoji">&#127921;</div>
+          <div class="emoji">&#127934;</div>
+        </div>
+      </section>
+
+      <div id="clustrmaps">
+        <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=h4YAqAN-BtgTi1jCWzvBvvs7JxONKNSiMa8xorgrfDk&co=3d95d3&cmn=f71111&cmo=ffc253'></script>
+      </div>
+
+      <div class="footer">
+        <p>© 2026 Xiaotian Zhao. Last updated: Jan 2026</p>
+      </div>
     </div>
-</footer>
 
-<!-- jQuery -->
-<script src="/js/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="/js/hux-blog.min.js"></script>
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-<!-- 
-     Because of the native support for backtick-style fenced code blocks 
-     right within the Markdown is landed in Github Pages, 
-     From V1.6, There is no need for Highlight.js, 
-     so Huxblog drops it officially.
-
-     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
-     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
--->
-<!--
     <script>
-        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
-            hljs.initHighlightingOnLoad();
-        })
+      // Mobile menu toggle functionality
+      document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        document.getElementById('navLinks').classList.toggle('show');
+      });
+      
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+          document.getElementById('navLinks').classList.remove('show');
+        });
+      });
+      
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
     </script>
-    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
--->
-
-
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("http://yoursite-url/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<script>
-    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-
-<!-- Google Analytics -->
-
-
-<script>
-    // dynamic User by Hux
-    var _gaId = 'UA-XXXXXXXX-X';
-    var _gaDomain = 'yoursite';
-
-    // Originial
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', _gaId, _gaDomain);
-    ga('send', 'pageview');
-</script>
-
-
-
-
-<!-- Baidu Tongji -->
-
-
-
-
-
-
-	<a id="rocket" href="#top" class=""></a>
-	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
-    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
-<!-- Image to hack wechat -->
-<img src="http://yoursite-url/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work -->
-
-</body>
-
+  </body>
 </html>
